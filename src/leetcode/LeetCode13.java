@@ -19,8 +19,6 @@ public class LeetCode13 {
      * 需要减去小的数字。对于这种情况，我们也可以将每个字符视作一个单独的值，若
      * 一个数字右侧的数字比它大，则该数字的符号取反。
      * XIV=X-I+V=10-1+5=14
-     * @param s
-     * @return
      */
     public static int romanToInt(String s) {
         int result=0;
