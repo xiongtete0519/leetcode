@@ -9,6 +9,7 @@ public class ListNode {
     }
     ListNode(int val, ListNode next){
         this.val=val;
+        this.next=next;
     }
 
     public static ListNode addTwoNumbers(ListNode l1, ListNode l2){
@@ -42,6 +43,14 @@ public class ListNode {
             listNode1.next=new ListNode(carry);
         }
         return listNode.next;
+    }
+    //遍历单链表
+    public static void list(ListNode listNode){
+        while(listNode!=null){
+            System.out.print(listNode.val+" ");
+            listNode=listNode.next;
+        }
+        System.out.println();
     }
 
     public static void main(String[] args) {
