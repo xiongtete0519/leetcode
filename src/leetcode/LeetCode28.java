@@ -8,7 +8,7 @@ public class LeetCode28 {
         int m=haystack.length();
         int n=needle.length();
         if(n==0||m<n)
-            return -1;
+        return -1;
         int i=0;    //目标串字符下标
         int j=0;    //模式串字符下标
         while(i<m&&j<n){
