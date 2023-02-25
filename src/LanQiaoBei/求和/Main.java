@@ -9,7 +9,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
         int[] arr = new int[n];
-        int sum=0;
+        long sum=0;
         for (int i = 0; i < n; i++) {
             int temp = scanner.nextInt();
             arr[i]=temp;
@@ -34,16 +34,15 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
         int[] arr = new int[n];
-        int sum=0;
-        int result=0;
+        long sum=0;
+        long result=0;
         for (int i = 0; i < n; i++) {
-            int temp = scanner.nextInt();
-            arr[i]=temp;
-            sum+=temp;  //直接刚开始就对数组求和
+            arr[i] = scanner.nextInt();
+            sum+=arr[i];  //直接刚开始就对数组求和
         }
-        for (int i = 0; i < arr.length; i++) {
-            result+=arr[i]*(sum-arr[i]);
-            sum-=arr[i];
+        for (int i = 0; i <n; i++) {
+            sum=sum-arr[i];
+            result+=arr[i]*sum;
         }
         System.out.println(result);
     }
