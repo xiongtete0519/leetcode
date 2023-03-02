@@ -26,7 +26,7 @@ public class Main {
                 .collect(Collectors.toMap(
                         Map.Entry::getKey,
                         Map.Entry::getValue,
-                        (oldValue, newValue) -> newValue,
+                        (oldValue, newValue) -> newValue,   //合并函数
                         LinkedHashMap::new)
                 );
 //        System.out.println(collect);
