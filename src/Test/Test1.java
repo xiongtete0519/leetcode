@@ -11,5 +11,7 @@ public class Test1 {
 
         System.out.println(1&2);
         System.out.println(1|2);
+
+        System.out.println(Integer.MAX_VALUE);
     }
 }
