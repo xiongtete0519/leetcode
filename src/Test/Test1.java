@@ -13,5 +13,12 @@ public class Test1 {
         System.out.println(1|2);
 
         System.out.println(Integer.MAX_VALUE);
+
+        StringBuilder s = new StringBuilder("123");
+        String s1 = String.valueOf(s);
+        String s2 = String.valueOf(s.reverse());
+        System.out.println(s1);
+        System.out.println(s2);
+
     }
 }
