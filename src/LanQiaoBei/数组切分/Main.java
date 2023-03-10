@@ -27,9 +27,9 @@ public class Main {
         for (int i = 1; i <= n; i++) {
             int max = arr[i];
             int min = arr[i];
-            for (int j = i; j > 0; j--) {
-                max = Math.max(max, arr[j]);
-                min = Math.min(min, arr[j]);
+            for (int j = i; j > 0; j--) {   //从后往前求dp[i]
+                max = Math.max(max, arr[j]);    //维护最大值
+                min = Math.min(min, arr[j]);    //维护最小值
                 if (max - min == i - j) {   //符合要求：最大值-最小值=区间长度
                     dp[i] = (dp[i] + dp[j - 1]) % mod;
                 }
