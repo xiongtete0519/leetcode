@@ -2,7 +2,7 @@ package LanQiaoBei.特殊的数;
 
 public class Main {
     public static void main(String[] args) {
-        Integer a=8518;
+        int a=8518;
         System.out.println(Integer.toBinaryString(a));
         //转十六进制字符串
         System.out.println(Integer.toHexString(a));
