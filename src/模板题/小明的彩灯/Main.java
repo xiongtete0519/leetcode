@@ -2,7 +2,11 @@ package 模板题.小明的彩灯;
 
 import java.util.Arrays;
 import java.util.Scanner;
-
+//5 3
+//2 2 2 1 5
+//1 3 3
+//4 5 5
+//1 1 -100
 public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
