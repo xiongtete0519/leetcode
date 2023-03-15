@@ -1,7 +1,7 @@
 package study.动态规划.最长上升子序列;
 
 import java.util.Scanner;
-
+//最长上升子序列
 public class LIS {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
