@@ -6,7 +6,11 @@ public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         String s = scan.next();
-        System.out.println(backStringJudge(s));
+        if (backStringJudge(s)) {
+            System.out.println("Y");
+        }else{
+            System.out.println("N");
+        }
 
     }
     //双指针判断回文串

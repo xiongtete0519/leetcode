@@ -10,6 +10,10 @@ import java.util.Scanner;
  * 即考虑往dp[0...i-1]中最长的上升子序列后面再加一个nums[i]。
  * 最后，整个数组的最长上升子序列即所有dp[i]中的最大值
  * length(LIS)=max(dp[i]),0<=i<n
+ *
+ * 6
+ * 1 4 2 2 5 6
+ * 输出：4
  */
 public class DP {
     public static void main(String[] args) {

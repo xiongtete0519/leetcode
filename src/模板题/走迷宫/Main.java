@@ -27,10 +27,10 @@ import java.util.Scanner;
 public class Main {
     //四个方向
     private static int[][] dirs={
-            {1,0},  //向右
-            {-1,0}, //向左
-            {0,1},  //向下
-            {0,-1}  //向上
+            {0,1},//右
+            {1,0},//下
+            {0,-1},//左
+            {-1,0}//上
     };
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
