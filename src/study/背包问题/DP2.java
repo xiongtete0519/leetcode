@@ -1,7 +1,7 @@
 package study.背包问题;
 
 
-//0-1背包问题
+//0-1背包问题：二维DP
 //本题条件是物品不能分割
 //dp[k][w]:表示当背包容量为w,现在有前k件物品可放的情况下，背包所能装物品的最大价值
 
@@ -11,7 +11,7 @@ package study.背包问题;
  * 物品重量:2,3,4,5
  * 物品价值:3,4,5,8
  */
-public class Demo1 {
+public class DP2 {
     //背包容量为8，4件物品
     public static void main(String[] args) {
         //这里下标从1开始

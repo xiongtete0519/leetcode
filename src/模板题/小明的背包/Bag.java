@@ -1,5 +1,6 @@
 package 模板题.小明的背包;
 
+import java.util.Arrays;
 import java.util.Scanner;
 //5 20
 //1 6
@@ -32,5 +33,8 @@ public class Bag {
             }
         }
         System.out.println(f[N][V]);
+//        Arrays.stream(f).forEach(x->{
+//            System.out.println(Arrays.toString(x));
+//        });
     }
 }
