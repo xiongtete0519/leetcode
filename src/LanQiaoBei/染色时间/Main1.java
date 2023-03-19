@@ -20,10 +20,10 @@ import java.util.PriorityQueue;
  */
 public class Main1 {
     public static int[][] dirs={
-            {-1,0},
-            {0,1},
-            {1,0},
-            {0,-1}
+            {-1,0},//上
+            {0,1},//右
+            {1,0},//下
+            {0,-1}//左
     };
     public static void main(String[] args) throws IOException {
         //使用java快读
