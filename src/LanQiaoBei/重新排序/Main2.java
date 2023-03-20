@@ -1,24 +1,32 @@
 package LanQiaoBei.重新排序;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.StreamTokenizer;
 import java.util.Arrays;
-import java.util.Scanner;
-
-public class Main {
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        int n = scan.nextInt();
-        int[] arr = new int[n];
+//80%
+public class Main2 {
+    public static void main(String[] args) throws IOException {
+        StreamTokenizer st = new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
+        st.nextToken();
+        int n = (int)st.nval;
+        long[] arr = new long[n];
         for (int i = 0; i < arr.length; i++) {
-            arr[i]=scan.nextInt();
+            st.nextToken();
+            arr[i]=(long)st.nval;
         }
         //查询的数目
-        int m = scan.nextInt();
+        st.nextToken();
+        int m = (int)st.nval;
         int[][] query = new int[m][2];
         //用一个count数组存储元素被加过的次数
         int[] count = new int[n];
         for (int i = 0; i < query.length; i++) {
-            query[i][0]=scan.nextInt();
-            query[i][1]=scan.nextInt();
+            st.nextToken();
+            query[i][0]=(int)st.nval;
+            st.nextToken();
+            query[i][1]=(int)st.nval;
         }
 
         //开始记录每个元素被加过的次数
@@ -27,10 +35,10 @@ public class Main {
                 count[j]++;
             }
         }
-        System.out.println(Arrays.toString(count));
+//        System.out.println(Arrays.toString(count));
 
         //未排序之前的和
-        int sum = SUM(arr, count);
+        long sum = SUM(arr, count);
 //        System.out.println("未排序之前的和为:"+sum);
         //要想重新排列数组使得查询结果的综合最大
         //只需让arr最大的元素被加的次数最多即可
@@ -38,14 +46,13 @@ public class Main {
         Arrays.sort(arr);
         Arrays.sort(count);
 
-        int addSum=SUM(arr,count);
+        long addSum=SUM(arr,count);
         System.out.println(addSum-sum);
 
-        scan.close();
     }
 
-    public static int SUM(int[] arr,int[] count){
-        int sum=0;
+    public static long SUM(long[] arr,int[] count){
+        long sum=0;
         for (int i = 0; i < arr.length; i++) {
             sum+=arr[i]*count[i];
         }
