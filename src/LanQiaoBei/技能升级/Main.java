@@ -36,7 +36,8 @@ public class Main {
         //将list逆序排序，并取前M个最大的数字并求和
         Integer sum = list.stream()
                 .sorted(Comparator.reverseOrder())//reverseOrder()返回一个与自然排序相反的比较器
-                .limit(m).reduce(Integer::sum)
+                .limit(m)
+                .reduce(Integer::sum)
                 .orElse(0);
         System.out.println(sum);
     }
