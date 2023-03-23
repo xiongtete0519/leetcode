@@ -9,12 +9,12 @@ import java.util.Arrays;
 //当str[j]>str[i],此时是降序，不考虑
 public class Main {
     public static void main(String[] args) {
-//        String str = "tocyjkdzcieoiodfpbgcncsrjbhmugdnojjddhllnofawllbhf" +
-//                "iadgdcdjstemphmnjihecoapdjjrprrqnhgccevdarufmliqij" +
-//                "gihhfgdcmxvicfauachlifhafpdccfseflcdgjncadfclvfmad" +
-//                "vrnaaahahndsikzssoywakgnfjjaihtniptwoulxbaeqkqhfwl";
+        String str = "tocyjkdzcieoiodfpbgcncsrjbhmugdnojjddhllnofawllbhf" +
+                "iadgdcdjstemphmnjihecoapdjjrprrqnhgccevdarufmliqij" +
+                "gihhfgdcmxvicfauachlifhafpdccfseflcdgjncadfclvfmad" +
+                "vrnaaahahndsikzssoywakgnfjjaihtniptwoulxbaeqkqhfwl";
 //        String str="213857";
-        String str="127837";
+//        String str="127837";
         int[] dp = new int[str.length()];
         //由于单个字符也算递增序列，所以dp初始化为1
         Arrays.fill(dp,1);
