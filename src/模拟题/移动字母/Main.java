@@ -22,8 +22,8 @@ public class Main {
             System.out.println(BFS(str));
         }
         in.close();
-        out.close();
         out.flush();
+        out.close();
     }
     //看最终状态能否到达ABCDE*
     public static int BFS(String str){
