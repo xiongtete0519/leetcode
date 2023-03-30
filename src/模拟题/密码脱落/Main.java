@@ -41,38 +41,12 @@ public class Main {
             //取最近的
             if(leftCount<rightCount){   //左边走的步数少
                 left+=leftCount;    //从左往右走
-            }else if(leftCount>rightCount){  //右边走的步数少
+            }else{  //右边走的步数少
                 right-=rightCount; //从右往左走
-            }else{
-                //二者相等，需要进一步判断哪一个更优
-                String rightStr = new StringBuffer(code.substring(left, leftCursor)).reverse().toString();
-                String rightCode = code.substring(0, right + 1) + rightStr + code.substring(right + 1);
-                String leftStr = new StringBuffer(code.substring(rightCursor + 1, right + 1)).reverse().toString();
-                String leftCode = code.substring(0, left) + leftStr + code.substring(left);
-                //计算汉明距离，哪个小就优先哪一个
-                long d1 = hammingDistance(leftCode, new StringBuffer(leftCode).reverse().toString());
-                long d2 = hammingDistance(rightCode, new StringBuffer(rightCode).reverse().toString());
-                if(d1<d2){
-                    right-=rightCount;
-                }else{
-                    left+=leftCount;
-                }
             }
             count+=Math.min(leftCount,rightCount);
         }
         return count;
-    }
-    public static long hammingDistance(String s1,String s2){
-        char[] charArray1 = s1.toCharArray();
-        char[] charArray2 = s2.toCharArray();
-        long distance=0;
-        for (int i = 0; i <charArray1.length ; i++) {
-            if(charArray1[i]!=charArray2[i]){
-                distance++;
-            }
-            return distance;
-        }
-        return distance;
     }
     public static String nextString() throws IOException{
         st.nextToken();
