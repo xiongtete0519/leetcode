@@ -54,9 +54,6 @@ public class Main {
         for (int i = 0; i < split.length; i++) {
             chars[i] = split[i].toCharArray();
         }
-//        Arrays.stream(chars).forEach(x -> {
-//            System.out.println(Arrays.toString(x));
-//        });
         bfs(chars);
     }
 

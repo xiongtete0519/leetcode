@@ -8,6 +8,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Bellman-Ford算法求解最短路径：可以解决负边权问题
+ * 但是不能解决负权回路问题
+ */
 public class BellmanFord {
     public static List<int[]> edges=new ArrayList<>();
     public static int[] dist;
