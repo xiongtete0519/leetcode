@@ -34,7 +34,7 @@ public class BellmanFord {
         Arrays.fill(dist,Integer.MAX_VALUE>>1);
         Arrays.fill(prev,-1);
         int s=1;    //设置起点
-        dist[s]=0;  //起点设置为0,其他设置为无穷大
+        dist[s]=0;  //起点的dist设置为0,其他设置为无穷大
         for (int i = 1; i <=n-1; i++) {//最多执行n-1次松弛
             for (int[] edge : edges) {  //枚举边
                 int u = edge[0];
