@@ -6,7 +6,11 @@ package study.递归;
  */
 public class Demo1 {
     public static void main(String[] args) {
-        System.out.println(FN(10));
+//        System.out.println(FN(30));
+//        System.out.println(FN(31));
+        for(int i=1;i<=31;i++){
+            System.out.println(i+"\t"+FN(i));
+        }
     }
     public static int FN(int n){
         if(n==1||n==2){

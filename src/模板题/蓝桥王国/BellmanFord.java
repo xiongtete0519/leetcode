@@ -27,7 +27,7 @@ public class BellmanFord {
             int u = nextInt();
             int v = nextInt();
             int w = nextInt();
-            edges.add(new int[]{u,v,w});
+             edges.add(new int[]{u,v,w});
             edges.add(new int[]{v,u,w});
         }
         //初始化
