@@ -43,12 +43,12 @@ public class Main {
                         if(a[tempX][tempY]>second){
                             res++;
                         }
-                        //第三个点不满足条件，移动
+                        //第三个点不满足条件，继续搜索
                         tempX+=move[i][0];
                         tempY+=move[i][1];
                     }
                 }
-                //第二个点不满足条件，移动
+                //第二个点不满足条件，继续搜索
                 tmpX+=move[i][0];
                 tmpY+=move[i][1];
             }

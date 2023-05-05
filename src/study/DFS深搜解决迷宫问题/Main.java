@@ -124,10 +124,10 @@ public class Main {
             if(a[tx][ty]==1&& !visited[tx][ty]){
                 visited[tx][ty]=true;//设置已访问
                 dfs1(tx,ty,step+1);
-                visited[tx][ty]=false;
+                visited[tx][ty]=false;  //回溯，复原
             }
         }
-        return;//回退
+//        return;//回退
     }
 
 }
