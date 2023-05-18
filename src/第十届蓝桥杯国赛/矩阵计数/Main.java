@@ -38,7 +38,7 @@ public class Main {
             map[i][j]=0;
         }
         //当前位置不能插入一个1，那就跳过当前位置，执行下一个位置
-        if(j<m-1){//该行还没填满
+        if(j<m-1){//该行还没填满，j=0~m-1
             dfs(i,j+1);
         }else{  //该行已经填满，从下一行的第一个位置开始
             dfs(i+1,0);
@@ -60,6 +60,7 @@ public class Main {
                 return false;
             }
         }
+        //可以插一个1
         return true;
     }
 

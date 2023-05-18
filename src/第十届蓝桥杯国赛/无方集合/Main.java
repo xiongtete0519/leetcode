@@ -25,10 +25,7 @@ public class Main {
     //判断是否是完全平方数
     public static boolean check(int n) {
         long sqrt = (long) Math.sqrt(n);
-        if (sqrt * sqrt == n) {
-            return true;
-        }
-        return false;
+        return sqrt * sqrt == n;
     }
 
 }

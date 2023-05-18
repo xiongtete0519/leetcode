@@ -38,12 +38,13 @@ public class Main1 {
             for (int j = i + 1; j <= n; j++) {//枚举右端点
                 d = gcd(d, a[j]);
                 if (d == 1) {
-                    //区间长度为j-i+1,但是我们将所有数字变成1的操作次数是j-i
+                    //区间长度为j-i+1,但是我们将所有数字变成1的操作次数是j-i，这段区间的最后一个数字就是1
                     tmp = Math.min(tmp, j - i);
                     break;
                 }
             }
         }
+        //需要tmp次操作才能gcd出一个1，剩下的n-1个数再进行n-1次gcd即可
         System.out.println(n - 1 + tmp);
     }
 

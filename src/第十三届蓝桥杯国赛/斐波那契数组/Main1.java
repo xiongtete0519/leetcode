@@ -23,7 +23,7 @@ public class Main1 {
             int a=i;
             int b=i;
             int c=0;
-            int ans=0;
+            int ans=0;  //与原数组相同的个数
             if(arr[1]==a){
                 ans++;
             }

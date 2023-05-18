@@ -9,6 +9,7 @@ public class Main {
     public static void main(String[] args) {
         long r1=0,r2=0; //存储当前字符串是全排列中的第几个
         long ts=1,s=1;  //存储阶乘
+        //计算A和B字符串在全排列中的排名
         for (int i = 0; i <n; i++) {
             A[i+1]=A_STR.charAt(i)-'a'; //将上面字符转数字存储，比较起来方便
             B[i+1]=B_STR.charAt(i)-'a';
