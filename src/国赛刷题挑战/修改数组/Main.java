@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.StreamTokenizer;
 import java.util.Arrays;
-//AC:并查集
+//Main2:并查集
 public class Main {
     public static int MAXN=1000000;
     public static int[] father=new int[1000010];//并查集数组

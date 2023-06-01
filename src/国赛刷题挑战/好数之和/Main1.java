@@ -7,7 +7,7 @@ import java.io.StreamTokenizer;
 import java.util.HashSet;
 
 /**
- * AC
+ * Main2
  * 直接生成含有2022的数，比较L和R是否符合，然后加入set避免重复
  */
 public class Main1 {

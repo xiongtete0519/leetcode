@@ -2,7 +2,7 @@ package 国赛打游击.异或变换;
 
 import java.util.Arrays;
 import java.util.Scanner;
-//AC:找到哪一步异或重复了，然后直接取模会节省大量时间
+//Main2:找到哪一步异或重复了，然后直接取模会节省大量时间
 public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
