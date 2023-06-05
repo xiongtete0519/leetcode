@@ -27,6 +27,7 @@ public class Main {
         for (int i = 0; i < ans.length; i++) {
             System.out.print(ans[i]+" ");
         }
+
     }
     //计算当前数列与好等差数列的距离
     public static int distance(int[] a){
