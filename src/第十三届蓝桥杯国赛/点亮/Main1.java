@@ -38,10 +38,10 @@ public class Main1 {
         for(int o=0;o<(1<<white.size());++o){
             init(n);
             for (int i = 0; i <white.size(); i++) {
+                int[] p=white.get(i);
+                ans[p[0]][p[1]]='O';
                 //二进制0代表没有灯，1代表有灯
                 if(((o>>i)&1)==1){
-                    int[] p=white.get(i);
-                    ans[p[0]][p[1]]='O';
                     light.add(p);
                     vis[p[0]][p[1]]=true;
                 }
@@ -58,7 +58,7 @@ public class Main1 {
         }
 
     }
-
+    //初始化
     public static void init(int n){
         light.clear();
         for (int i = 0; i < n; i++) {
@@ -84,7 +84,7 @@ public class Main1 {
                     cnt++;
                 }
             }
-            if(ans[x][y]!='x'&&cnt!=ans[x][y]-'0'){
+            if(ans[x][y]!='X'&&cnt!=ans[x][y]-'0'){
                 return false;
             }
         }
