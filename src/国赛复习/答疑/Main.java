@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.StreamTokenizer;
 import java.util.Arrays;
+import java.util.Comparator;
+
 //贪心
 public class Main {
     public static StreamTokenizer st=new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
@@ -18,6 +20,7 @@ public class Main {
         }
         //根据每行的总和大小进行排序
         Arrays.sort(arr,(a,b)->(a[0]+a[1]+a[2])-(b[0]+b[1]+b[2]));
+
         //最小时间
         long res=0; //记录发消息时刻的时间和
         long sum=0; //记录所有总和
