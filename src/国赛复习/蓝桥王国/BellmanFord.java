@@ -20,8 +20,8 @@ public class BellmanFord {
     public static void main(String[] args) throws IOException {
         int n=nextInt();    //n个点
         int m=nextInt();    //m条边
-        dist=new int[m+1];
-        prev=new int[m+1];
+        dist=new int[n+1];
+        prev=new int[n+1];
         for (int i = 0; i <m ; i++) {
             int u=nextInt();
             int v=nextInt();

@@ -5,8 +5,6 @@ import java.util.Scanner;
 
 //最短路径，邻接矩阵实现
 public class Dijkstra {
-//    public static int M=10000;
-//    public static int N = 10000;
     public static int n,m,s;
     static int[][] mp;  //地图：邻接矩阵存储
     static int[] dis;   //dis[v]：从s到v的最短路径长度

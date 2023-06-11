@@ -7,7 +7,6 @@ import java.io.StreamTokenizer;
 
 public class Main {
     public static StreamTokenizer st=new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
-
     public static void main(String[] args) throws IOException{
         long n=nextLong();
         int k=nextInt();
