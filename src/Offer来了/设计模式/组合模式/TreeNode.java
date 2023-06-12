@@ -1,5 +1,7 @@
 package Offer来了.设计模式.组合模式;
 
+import com.alibaba.fastjson2.JSON;
+
 import java.util.Enumeration;
 import java.util.Vector;
 
@@ -45,5 +47,6 @@ public class TreeNode {
         TreeNode nodeA = new TreeNode("A");
         TreeNode nodeB = new TreeNode("B");
         nodeA.add(nodeB);
+        System.out.println(JSON.toJSONString(nodeA));
     }
 }
