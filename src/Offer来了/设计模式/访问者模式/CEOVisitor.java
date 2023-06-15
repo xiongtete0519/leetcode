@@ -1,0 +1,14 @@
+package Offer来了.设计模式.访问者模式;
+
+import com.alibaba.fastjson2.JSON;
+
+import java.util.Date;
+
+public class CEOVisitor implements Visitor {
+    @Override
+    public void visit(ProjectElement element) {
+        System.out.println("CEO Visitor Element");
+        element.signature("CEO",new Date());
+        System.out.println(JSON.toJSON(element));
+    }
+}
