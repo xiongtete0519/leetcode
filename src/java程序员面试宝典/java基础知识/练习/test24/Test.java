@@ -1,0 +1,21 @@
+package java程序员面试宝典.java基础知识.练习.test24;
+
+public class Test {
+    public static void main(String[] args) {
+        Integer a=1;
+        Integer b=2;
+        Integer c=3;
+        Integer d=3;
+        Integer e=321;
+        Integer f=321;
+        Long g=3L;
+        Long h=2L;
+        Integer i=new Integer(1);
+        Integer j=new Integer(1);
+        System.out.println(c==d);
+        System.out.println(e==f);
+        System.out.println(c==(a+b));
+        System.out.println(g.equals(a+b));
+        System.out.println(i==j);
+    }
+}
