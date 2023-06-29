@@ -10,8 +10,10 @@ public class Main {
             if(nums[mid]==target){
                 return mid;
             }else if(nums[mid]>target){
+                //这里nums[mid]已经比target大了，下一次区间就不用包含mid了，到mid-1就行
                 right=mid-1;
             }else{
+                //这里nums[mid]已经比target小了，下一次直接从mid的右边开始就行
                 left=mid+1;
             }
         }
