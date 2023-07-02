@@ -1,7 +1,6 @@
 package 代码随想录.链表.设计链表.双向链表;
 
-import java.util.List;
-
+//双链表：这个写法的头节点和尾节点都是虚拟节点
 public class MyLinkedList {
     int size;   //链表中元素数量
     ListNode head;  //虚拟头节点
