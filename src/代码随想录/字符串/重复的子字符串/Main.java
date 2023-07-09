@@ -1,4 +1,9 @@
 package 代码随想录.字符串.重复的子字符串;
+
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+
 //leetcoded459:重复的子字符串
 public class Main {
     //将两个s连接在一起，并移除第一个和最后一个字符。
