@@ -16,7 +16,6 @@ public class Main {
      */
     public static int evalRPN(String[] tokens) {
         Deque<Integer> stack=new LinkedList<>();
-        int len=tokens.length;
         for (String token : tokens) {
             if(isNumber(token)){
                 stack.push(Integer.parseInt(token));
