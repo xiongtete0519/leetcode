@@ -1,25 +1,34 @@
-package 代码随想录.二叉树.后序遍历;
+package 代码随想录.二叉树.后序遍历.迭代;
 
 import 代码随想录.二叉树.TreeNode;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.Stack;
 
-public class LeetCode145 {
+//后序遍历：迭代
+public class Main {
 
     public static List<Integer> postorderTraversal(TreeNode root) {
         List<Integer> result = new ArrayList<>();
-        postorder(root, result);
-        return result;
-    }
-
-    public static void postorder(TreeNode root, List<Integer> result) {
         if (root == null) {
-            return;
+            return result;
         }
-        postorder(root.left, result);
-        postorder(root.right, result);
-        result.add(root.val);
+        Stack<TreeNode> stack = new Stack<>();
+        stack.push(root);
+        while (!stack.isEmpty()) {
+            TreeNode node = stack.pop();
+            result.add(node.val);
+            if (node.left != null) {
+                stack.push(node.left);
+            }
+            if (node.right != null) {
+                stack.push(node.right);
+            }
+        }
+        Collections.reverse(result);
+        return result;
     }
 
     public static void main(String[] args) {

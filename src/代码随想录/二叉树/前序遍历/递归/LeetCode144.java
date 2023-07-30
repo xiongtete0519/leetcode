@@ -1,4 +1,4 @@
-package 代码随想录.二叉树.前序遍历;
+package 代码随想录.二叉树.前序遍历.递归;
 
 import 代码随想录.二叉树.TreeNode;
 

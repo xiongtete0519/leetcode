@@ -1,25 +1,31 @@
-package 代码随想录.二叉树.中序遍历;
+package 代码随想录.二叉树.中序遍历.迭代;
 
 import 代码随想录.二叉树.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
-public class LeetCode94 {
-
+//中序遍历
+public class Main {
     public static List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> result = new ArrayList<>();
-        inorder(root, result);
-        return result;
-    }
-
-    public static void inorder(TreeNode root, List<Integer> result) {
         if (root == null) {
-            return;
+            return result;
         }
-        inorder(root.left, result);
-        result.add(root.val);
-        inorder(root.right, result);
+        Stack<TreeNode> stack = new Stack<>();
+        TreeNode cur = root;
+        while (cur != null || !stack.isEmpty()) {
+            if (cur != null) {  //访问到最底层
+                stack.push(cur);
+                cur = cur.left;   //左
+            } else {
+                cur = stack.pop();    //从栈里弹出的数据就是要处理的数据
+                result.add(cur.val);    //中
+                cur = cur.right;          //右
+            }
+        }
+        return result;
     }
 
     public static void main(String[] args) {
