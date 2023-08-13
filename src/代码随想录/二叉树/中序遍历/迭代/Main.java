@@ -2,9 +2,7 @@ package 代码随想录.二叉树.中序遍历.迭代;
 
 import 代码随想录.二叉树.TreeNode;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
 
 /**
  * 中序遍历
@@ -32,6 +30,21 @@ public class Main {
         return result;
     }
 
+    public static List<Integer> inorderTraversal1(TreeNode root) {
+        Deque<TreeNode> stack = new LinkedList<>();
+        List<Integer> res = new ArrayList<>();
+        while (!stack.isEmpty() || root != null) {
+            while (root != null) {
+                stack.push(root);
+                root = root.left;
+            }
+            root = stack.pop();
+            res.add(root.val);
+            root = root.right;
+        }
+        return res;
+    }
+
     public static void main(String[] args) {
         TreeNode node1 = new TreeNode(1);
         TreeNode node2 = new TreeNode(2);
@@ -40,6 +53,8 @@ public class Main {
         node2.left = node3;
         List<Integer> list = inorderTraversal(node1);
         System.out.println("二叉树的中序遍历结果为");
-        list.forEach(x -> System.out.print(x + " "));
+        System.out.println(list);
+        List<Integer> list1 = inorderTraversal1(node1);
+        System.out.println(list1);
     }
 }
