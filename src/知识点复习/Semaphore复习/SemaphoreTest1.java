@@ -8,7 +8,7 @@ import java.util.concurrent.ThreadPoolExecutor;
 public class SemaphoreTest1 {
     public static void main(String[] args) {
         int printNumber = 5;//设置线程数，即员工数量
-        Semaphore semaphore = new Semaphore(2);
+        Semaphore semaphore = new Semaphore(2);//设置并发数，即打印机数量
         ExecutorService threadPool = Executors.newFixedThreadPool(5);
         for (int i = 0; i < printNumber; i++) {
             threadPool.execute(new Worker(i, semaphore));

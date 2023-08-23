@@ -4,8 +4,8 @@ import java.util.concurrent.Semaphore;
 
 public class SemaphoreTest {
     public static void main(String[] args) {
-        int printNumber = 5;//设置线程数，即员工数量
-        Semaphore semaphore = new Semaphore(2);
+        int printNumber = 100;//设置线程数，即员工数量
+        Semaphore semaphore = new Semaphore(2);//设置并发数，即打印机数量
         for (int i = 0; i < printNumber; i++) {
             new Worker(i, semaphore).start();
         }
