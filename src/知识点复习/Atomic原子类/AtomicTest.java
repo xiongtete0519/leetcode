@@ -21,7 +21,7 @@ public class AtomicTest {
             });
         }
         latch.await();
-        System.out.println("类加之和：" + atomicInteger.get());
+        System.out.println("累加之和：" + atomicInteger.get());
         pool.shutdown();
     }
 }
